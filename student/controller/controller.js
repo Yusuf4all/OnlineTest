@@ -112,7 +112,7 @@ function startTime() {
 }
 function ring() {
     var audio = document.querySelector('#audio');
-    audio.src = '/JavaScript/OnlineTest/css/ding.mp3';
+    audio.src = '../../css/ding.mp3';
     audio.play();
 }
 function convertTime(seconds) {
