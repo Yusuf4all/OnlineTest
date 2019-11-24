@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Forgot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Custom css -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+    <!-- Custom JavaScript -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
+
+    <script src="./firebass/firebase.js"></script>
+    <script src="./javscript/forgot.js"></script>
+</head>
+
+<body>
+    <div class="user forgot">
+        <img class="imglogo" src="./css/User.jpg" alt="not found">
+        <h2>Forgot Password?</h2>
+        <!-- <form> -->
+            <p>Please enter your email address below and we will send you information to recover your account.</p><br/>
+        
+            <input type="text" id="email" placeholder="Enetr Email" autocomplete="off" required>
+            <button id="forgot" class="btn text-dark w-100 bg-light mb-3">Send email</button>
+        <!-- </form> -->
+    </div>
+</body>
+</html>

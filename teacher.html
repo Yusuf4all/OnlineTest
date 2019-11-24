@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CRUD TEACHER</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- JavaScript -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
+    <script src="./firebass/firebase.js"></script>
+    <script src="./teacher/database/dbOperation.js"></script>
+    <script src="./teacher/utils/util.js"></script>
+    <script src="./teacher/model/question.js"></script>
+    <script src="./teacher/model/questionoperation.js"></script>
+    <script src="./teacher/controller/controller.js"></script>
+
+</head>
+
+<body>
+    <div class="container" id="crud">
+        <h1 class="pt-2 pb-3 alert-dark text-center"> Question Crud<button id="logout" type="button"
+                class="btn btn-danger">Logout</button></h1>
+        <div class="form-group">
+            <label>Id</label>
+            <label id="id" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label>Name</label>
+            <textarea class="form-control clear" id="name" cols="30" rows="5" placeholder="Type Question"></textarea>
+        </div>
+        <div class="form-group">
+            <label>OptionA</label>
+            <input type="text" id="optionA" class="form-control clear" placeholder="Type OptionA">
+        </div>
+        <div class="form-group">
+            <label>OptionB</label>
+            <input type="text" id="optionB" class="form-control clear" placeholder="Type OptionB">
+        </div>
+        <div class="form-group">
+            <label>OptionC</label>
+            <input type="text" id="optionC" class="form-control clear" placeholder="Type OptionC">
+        </div>
+        <div class="form-group">
+            <label>OptionD</label>
+            <input type="text" id="optionD" class="form-control clear" placeholder="Type OptionD">
+        </div>
+        <div class="form-group">
+            <label>Right Answer</label>
+            <input type="text" id="rans" class="form-control clear" placeholder="Type Right Answer">
+        </div>
+        <div class="form-group">
+            <label>Score</label>
+            <input type="range" id="score" class="form-control" min="1" max="10">
+        </div>
+        <div class="form-group">
+            <h4>Total Questions:- <span id="total" class="text-danger">0</span></h4>
+            <h4>Selected Questions:- <span id="selected" class="text-danger">0</span></h4>
+            <h4>Unselected Questions:- <span id="unselected" class="text-danger">0</span></h4>
+        </div>
+        <div class="form-group">
+            <button id="add" class="btn btn-primary my-0">Add</button>
+            <button id="delete" class="btn btn-danger my-1">Delete</button>
+            <button id="search" class="btn btn-secondary my-1">Search</button>
+            <button id="update" class="btn btn-info my-1">Update</button>
+            <button id="save" class="btn btn-success my-1">Save</button>
+            <button id="load" class="btn btn-warning my-1">Load</button>
+            <button id="clear" class="btn btn-secondary my-1">Clear All</button>
+            <button id="sort" class="btn btn-info my-2">Sort</button>
+            <button id="sserver" class="btn btn-success my-1">Save To Server</button>
+            <button id="fserver" class="btn btn-info my-1">Fetch From Server</button>
+        </div>
+        <div id="searchBox" class="form-group d-none">
+            <select id="mySearchSelect" class="form-control my-2">
+                <option value="id">Id</option>
+                <option value="name">Name</option>
+                <option value="score">Score</option>
+            </select>
+            <input type="text" id="searchData" class="form-control my-2" placeholder="Type here for serach">
+            <button class="btn btn-success " id="fsearch">Search Now</button>
+        </div>
+
+        <div id="sortBox" class="form-group d-none">
+            <select id="mySortSelect" class="form-control my-2">
+                <option value="id">Id</option>
+                <option value="name">Name</option>
+                <option value="score">Score</option>
+            </select>
+            <button class="btn btn-success" id="fsort">Sort Now</button>
+        </div>
+
+
+        <div>
+            <table class="table">
+                <thead class='table-dark'>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>OptionA</th>
+                        <th>OptionB</th>
+                        <th>OptionC</th>
+                        <th>OptionD</th>
+                        <th>Right Answer</th>
+                        <th>Score</th>
+                        <th>Operation</th>
+                    </tr>
+                </thead>
+                <tbody id="printQuestion">
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</body>
+
+</html>

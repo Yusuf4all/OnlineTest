@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+    <!-- JavaScript -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase.js"></script>
+    <script src="./firebass/firebase.js"></script>
+    <script src="./student/model/getQuestion.js"></script>
+    <script src="./student/database/dbOperation.js"></script>
+    <script src="./student/model/question.js"></script>
+    <script src="./student/controller/controller.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="bg-dark">
+    <div class="container-fluid p-0 " id="onlineTest">
+        <h1 id="header" class="pt-2 pb-3 alert-dark text-center"><span id="msg">Time Left:- </span><span
+                id="timer">00:00</span>Student Test<button id="logout" type="button"
+                class="btn btn-danger">Logout</button>
+        </h1>
+        <audio class="d-none" controls id="audio">
+            <source src="#">
+        </audio>
+
+        <div class="form-group px-4 text-light" id="qustion">
+            <h3 class="d-none change" id="head">Q. <span id="count"></span> :- <span id="print"> </span></h3>
+        </div>
+
+        <div id="result" class="d-none">
+            <h2 class="text-light text-center">Your Total Score is :- <span id='total' class="text-success"></span>
+            </h2>
+            <h2 class="text-light text-center">Result</h2>
+            <table class="table table-striped table-dark">
+                <thead>
+                    <tr>
+                        <th>Right Answer</th>
+                        <th>Your Answer</th>
+                    </tr>
+                </thead>
+                <tbody id="comparision">
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="px-4 text-light change d-none" id="option"></div>
+
+        <div class="d-flex justify-content-center text-light">
+            <table id="userInfo" class="table table-striped table-dark">
+                <tr>
+                    <td>User Id</td>
+                    <td id="uid"></td>
+                </tr>
+                <tr>
+                    <td>Total questions</td>
+                    <td id="tques"></td>
+                </tr>
+                <tr>
+                    <td>Total time</td>
+                    <td id="time"></td>
+                </tr>
+                <tr>
+                    <td>Marks</td>
+                    <td id="marks"></td>
+                </tr>
+                <tr>
+                    <td>Notice</td>
+                    <td>Test and test time will start when you click Start Test button, Test will submit either you
+                        click Finish Test button or left time will 00:00. </td>
+                </tr>
+                <tr>
+                    <td>Warning</td>
+                    <td>Log out your self after finish the test and do not refresh page!!!</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="d-flex justify-content-center" id="test">
+            <button class="w-50 btn btn-success" id="startTest">
+                <h3>Start Test</h3>
+            </button>
+        </div>
+
+        <div class="p-4 d-flex justify-content-between" id="btn">
+            <button class="btn btn-primary w-25 d-none change" id="previous">Prev</button>
+            <button class="btn btn-danger w-25 d-none change" id="finish">Finish Test</button>
+            <button class="btn btn-primary w-25 d-none change" id="next">Next</button>
+        </div>
+    </div>
+</body>
+
+</html>

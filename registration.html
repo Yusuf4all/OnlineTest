@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Registration page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <!-- Custom css -->
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+  <!-- firbase -->
+  <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase.js"></script>
+  <script src="./firebass/firebase.js"></script>
+  <!-- Custom javascript -->
+  <script src="./javscript/register.js"></script>
+
+</head>
+
+<body>
+  <div class="user wrap">
+    <img class="imglogo" src="./css/User.jpg" alt="not found">
+    <h2>Register your self here!!</h2>
+    <!-- <form> -->
+    <p>Email</p>
+    <input type="email" id="email" placeholder="Email" autocomplete="off" required>
+    <p>Password</p>
+    <input type="password" id="pwd" placeholder="Password" required>
+    <p>Confirm Password</p>
+    <input type="password" id="cpwd" placeholder="Confirm Password" required>
+    <button id="doRegister" class="btn text-dark w-100 bg-light mb-2">Submit</button>
+    <div class="d-flex justify-content-center">
+      <button class="btn text-white" id="Login">Already Register??</button>
+    </div>
+    <!-- </form> -->
+  </div>
+</body>
+
+</html>

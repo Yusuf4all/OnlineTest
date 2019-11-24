@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Custom css -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+    <!-- Custom JavaScript -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
+
+    <script src="./firebass/firebase.js"></script>
+    <script src="./javscript/login.js"></script>
+</head>
+
+<body>
+    <div id="login" class="user">
+        <img class="imglogo" src="./css/User.jpg" alt="not found">
+        <h2>Login to your Account</h2>
+        <!-- <form > -->
+        <p>Email</p>
+        <input type="text" id="email" placeholder="Enetr Email" autocomplete="off" required>
+        <p>Password</p>
+        <input type="password" id="pwd" placeholder="Enter Password" autocomplete="off" required>
+        <button id="doLogin" class="btn text-dark w-100 bg-light mb-3">Login</button>
+    <!-- </form> -->
+
+        <div class="d-flex justify-content-between">
+            <button id="fpass" class="btn text-white">Forgot Password</button>
+            <button id="register" class="btn text-white">Registration</button>
+        </div>
+    </div>
+</body>
+
+</html>

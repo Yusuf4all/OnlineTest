@@ -1,0 +1,108 @@
+body
+{
+    padding: 0%;
+    margin: 0%;
+    background: url('test.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 640px;
+    background-attachment: fixed;
+    font-family: Comic Sans MS;
+}
+h1,h2,h3,h4,h5,h6
+{
+    margin:0px;
+    padding:0px;
+}
+img
+{
+    width: 100%;
+}
+
+.user
+{
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, .5);
+    color:#fff;
+    width: 350px;
+    height: 450px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    box-sizing: border-box;
+    position: relative;
+    padding: 70px 30px;
+}
+
+.imglogo
+{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden; 
+    position: absolute;
+    top:-50px;
+    left: 35%;
+    z-index: 1000;
+
+}
+
+.user h2
+{
+    margin: 0px;
+    padding: 0 0 20px;
+    text-align: center;
+}
+
+.user p
+{
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+    color: #fff;
+}
+#print
+{
+    color:red;
+    font-size: 18px;
+    text-align: center;
+}
+
+.user input
+{
+     width: 100%;
+     margin-bottom: 20px;
+}
+
+.user input[type="text"],
+.user input[type="email"],
+.user input[type="password"],
+.user input[type="date"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color:#fff;
+    font-size: 16px;
+}
+
+::placeholder
+{
+    color:rgba(255, 2555, 255, .5)
+}
+.user button
+{
+    border-radius: 20px;
+}
+
+.wrap
+{
+    height: 510px;
+    /* padding: 20px 30px; */
+}
+.forgot {
+    height: 350px;
+}
