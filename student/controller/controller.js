@@ -48,6 +48,7 @@ function finishTest() {
     });
     clearInterval(interval);
     printResult(userScore);
+    ring();
     questionOpr.question.userScore = userScore;
     dbOperation.submitResult(questionOpr.question).then((data) => {
         alert('Thank you!!!');
