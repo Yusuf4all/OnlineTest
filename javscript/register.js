@@ -19,7 +19,7 @@ function doRegister() {
       var result = firebase.auth().createUserWithEmailAndPassword(email, pwd);
       result.then((data) => {
         alert('Register Successfully now login your self....')
-      }).catch((err) => console.log(err));
+    }).catch((err)=> alert(err.message));
     }
     else {
       alert('Password not match');
